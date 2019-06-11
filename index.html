@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Just A Map</title>
+  <style type="text/css">
+    html, body {max-width: 100%;overflow-x: hidden;}
+    * {padding: 0;margin: 0;box-sizing: border-box;}
+    #left-menu {width: 30vw;height: 100vh;float: right;padding-right: 15px}
+    #map {width: 68vw;height: 100vh;float: left;}
+    .maptalks-attribution a {display: none;}
+    #info{position:fixed;background-color:rgba(13, 13, 13, 0.5);padding:10px 10px 10px 10px;font:13px bold sans-serif;color:#fff;right:20px;top:20px;width:100px;height:40px;overflow:hidden}
+    .custom_menu{width:150px;color:#fff;background-color:#051127;border:1px solid #0c2c45;list-style:none;padding:0}
+    .custom_menu li{padding:0 8px;font-size:12px;line-height:24px;}
+    .custom_menu li:hover{background:#0e595e;cursor:pointer}
+    .custom_menu li+li{border-top:1px solid #bbb}
+    .card-body{padding:none}
+    .maptalks-dropMenu>ul>li{width: 170px !important}
+  </style>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <!-- <link href="css/style.css" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/maptalks/dist/maptalks.css"/>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/maptalks/dist/maptalks.min.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/maptalks.plotsymbol/dist/maptalks.plotsymbol.min.js"></script>
+
+</head>
+
+<body>
+  <div id="left-menu">
+    <h1>List Of Users</h1>
+      <section class="pt-0 mt-10 pb-3">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card-group">
+                <div class="card card-personal mb-4">
+                  <div class="view">
+                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(26).jpg" alt="Card image cap">
+                    <a href="#!">
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+                  <div class="card-body">
+                    <a>
+                      <h4 class="card-title">Anna</h4>
+                    </a>
+                    <a class="card-meta">Hunter</a>
+                    <p class="card-text">Anna is a web designer living in New York.</p>
+                  </div>
+        
+                </div>
+                <div class="card card-personal mb-4">
+                  <div class="view">
+                    <img class="card-img-top" src="http://www.theimagebucket.com/fakepersongenerator/Face/male/male1085807984588.jpg" alt="Card image cap">
+                    <a href="#!">
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+                  <div class="card-body">
+                    <a>
+                      <h4 class="card-title">Carl</h4>
+                    </a>
+                    <a class="card-meta">Hunter</a>
+                    <p class="card-text">Carl is a engineer living in Miami.</p>
+                  </div>
+                </div>
+        
+                <div class="card card-personal mb-4">
+                  <div class="view">
+                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(28).jpg" alt="Card image cap">
+                    <a href="#!">
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+                  <div class="card-body">
+                    <a>
+                      <h4 class="card-title">Sara</h4>
+                    </a>
+                    <a class="card-meta">Researcher</a>
+                    <p class="card-text">Sara is a video maker living in Tokyo.</p>
+                  </div>
+                </div>
+
+                <div class="card card-personal mb-4">
+                    <div class="view">
+                      <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(27).jpg" alt="Card image cap">
+                      <a href="#!">
+                        <div class="mask rgba-white-slight"></div>
+                      </a>
+                    </div>
+                    <div class="card-body">
+                      <a>
+                        <h4 class="card-title">John</h4>
+                      </a>
+                      <a class="card-meta">Researcher</a>
+                      <p class="card-text">John is a copywriter living in Seattle.</p>
+                    </div>
+                  </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col-md-12">
+                <div class="card-group">
+                  <div class="card card-personal mb-4">
+                    <div class="view">
+                      <img class="card-img-top" src="http://www.theimagebucket.com/fakepersongenerator/Face/female/female1021854932830.jpg" alt="Card image cap">
+                      <a href="#!">
+                        <div class="mask rgba-white-slight"></div>
+                      </a>
+                    </div>
+                    <div class="card-body">
+                      <a>
+                        <h4 class="card-title">Maria</h4>
+                      </a>
+                      <a class="card-meta">Runner</a>
+                      <p class="card-text">Maria is a manager living in Houston.</p>
+                    </div>
+          
+                  </div>
+                  <div class="card card-personal mb-4">
+                    <div class="view">
+                      <img class="card-img-top" src="http://www.theimagebucket.com/fakepersongenerator/Face/male/male1084822683533.jpg" alt="Card image cap">
+                      <a href="#!">
+                        <div class="mask rgba-white-slight"></div>
+                      </a>
+                    </div>
+                    <div class="card-body">
+                      <a>
+                        <h4 class="card-title">Arda</h4>
+                      </a>
+                      <a class="card-meta">Runner</a>
+                      <p class="card-text">Arda is a student living in Bursa.</p>
+                    </div>
+                  </div>
+          
+                  <div class="card card-personal mb-4">
+                    <div class="view">
+                      <img class="card-img-top" src="http://www.theimagebucket.com/fakepersongenerator/Face/male/male20161086360116394.jpg" alt="Card image cap">
+                      <a href="#!">
+                        <div class="mask rgba-white-slight"></div>
+                      </a>
+                    </div>
+                    <div class="card-body">
+                      <a>
+                        <h4 class="card-title">Ahmet</h4>
+                      </a>
+                      <a class="card-meta">Digger</a>
+                      <p class="card-text">Ahmet is a film producer living in Doha.</p>
+                    </div>
+                  </div>
+  
+                  <div class="card card-personal mb-4">
+                      <div class="view">
+                        <img class="card-img-top" src="http://www.theimagebucket.com/fakepersongenerator/Face/female/female20131023644970397.jpg" alt="Card image cap">
+                        <a href="#!">
+                          <div class="mask rgba-white-slight"></div>
+                        </a>
+                      </div>
+                      <div class="card-body">
+                        <a>
+                          <h4 class="card-title">Xin</h4>
+                        </a>
+                        <a class="card-meta">Digger</a>
+                        <p class="card-text">Xin is a business woman living in Shangai.</p>
+                      </div>
+                    </div>
+  
+                </div>
+              </div>
+            </div>
+        </section>
+  </div>
+  <div id="map"></div>
+  
+  <script>
+    // var c = [34, 39];
+    // var c=[0,0];
+    // var map = new maptalks.Map("map", {
+    //   center: c,
+    //   zoom: 2,
+    //   baseLayer: new maptalks.TileLayer("base", {
+    //     urlTemplate:
+    //       "http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png",
+    //     subdomains: ["a", "b", "c", "d"],
+    //     attribution:
+    //       '&copy; <a href="http://osm.org">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/">CARTO</a>'
+    //   })
+    // });
+    // var options = {
+    //   custom: true,
+    //   items:
+    //     '<ul class="custom_menu">' +
+    //     '<li onclick="clickItem(this);" name="Add Point"><i class="large material-icons">add_circle_outline</i>Add Point</li>' +
+    //     '<li onclick="clickItem(this);"><i class="large material-icons">bookmark</i>Add Bookmark</li>' +
+    //     '<li onclick="clickItem(this);"><i class="large material-icons">call</i>Call Owner</li>' +
+    //     '<li onclick="clickItem(this);"><i class="large material-icons">insert_chart</i>Get Statistics</li>' +
+    //     "</ul>"
+    // };
+
+    // map.on("contextmenu", function(e) {
+    //   map.setMenu(options).openMenu();
+    //   map.openMenu(e.coordinate);
+    // });
+
+
+    // // map.on("click",(e)=> {
+    // //   // console.log(e.coordinate);
+    // //   // marker.addTo(map).show();
+    // // });
+
+    // function clickItem(dom) {
+    //   window.alert(dom.innerText + " clicked");
+    // }
+
+
+
+    var map = new maptalks.Map('map', {
+            center: [34, 39],
+            zoom: 6,
+            attributionControl: {
+                'content': '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attributions">CARTO</a>'
+            },
+            baseLayer: new maptalks.TileLayer("base", {
+                'urlTemplate': 'http://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}.png',
+                'subdomains': ['a', 'b', 'c', 'd', 'e']
+            })
+        });
+        var layer = new maptalks.VectorLayer('vector', {
+            enableSimplify: true
+        }).addTo(map);  
+
+        var drawTool = new maptalks.DrawTool({
+            mode: 'Point',
+            symbol: {
+                'lineColor': '#e84',
+                'polygonFill': '#f00',
+                'polygonOpacity': 0.5,
+                'polygonPatternFile': drawFillStyle('#ff0', 1, 20)
+            }
+        }).addTo(map).disable();
+        drawTool.on('drawend', function (param) {
+            drawTool.disable();
+            var geometry = param.geometry;
+            layer.addGeometry(geometry);
+            geometry.updateSymbol({
+                'polygonFill': '#ff0'
+            });
+            geometry.on('dblclick', e => {
+                e.target.startEdit();
+            });
+        });
+
+        var items = ['DoubleArrow', 'ClosedCurve', 'Sector', 'StraightArrow', 'DiagonalArrow', 'DoveTailDiagonalArrow', 'Point', 'ArcCurve', 'BoxZoom', 'FreeHandCircle', 'FreeHandEllipse', 'FreeHandLineString', 'FreeHandRectangle', 'FreeHandPolygon', 'Rectangle', 'Polygon', 'LineString', 'Circle', 'QuadBezierCurve', 'CubicBezierCurve'].map(function (value) {
+            return {
+                item: value,
+                click: function () {
+                    drawTool.setMode(value).enable();
+                }
+            };
+        });
+        new maptalks.control.Toolbar({
+          'position' : 'top-left',
+          'items'     : [{
+            item: 'Add Data',
+            click : function () { info('menu'); },
+            children : [{
+              item: 'GEOJSON',
+              click : function () { info('child 1'); }
+            }, {
+              item: 'SHP',
+              click : function () { info('child 2');
+             }
+            }]  
+          },           
+          {
+            item: 'Disable Drawing',
+            click: function () {drawTool.disable();}
+          },
+           {
+            item: 'Add Shape',
+            children: items
+          }, {
+            item: 'Clear',
+            click : function () { layer.clear(); }
+          }]
+        })
+        .addTo(map);
+
+       
+        function drawFillStyle(lineColor, lineWidth, spacing) {
+            var color = lineColor || '#ccc';
+            var width = lineWidth || 1.0;
+            var space = spacing || 15;
+            var canvas = document.createElement('canvas');
+            canvas.width = spacing * 3 + lineWidth;
+            canvas.height = spacing * 3 + lineWidth;
+            return drawGrid(canvas, color, width, spacing, spacing);
+        }
+
+        function drawGrid(canvas, color, lineWidth, stepx, stepy) {
+            var context = canvas.getContext("2d");
+            context.strokeStyle = color;
+            context.lineWidth = lineWidth;
+            for (var i = stepx + 0.5; i < context.canvas.width; i += stepx) {
+                context.beginPath();
+                context.moveTo(i, 0);
+                context.lineTo(i, context.canvas.height);
+                context.stroke();
+            }
+
+            for (var i = stepy + 0.5; i < context.canvas.height; i += stepy) {
+                context.beginPath();
+                context.moveTo(0, i);
+                context.lineTo(context.canvas.width, i);
+                context.stroke();
+            }
+            const data = canvas.toDataURL('image/png', 1);
+            return data;
+        }
+
+    
+  </script>
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+</body>
+
+</html>
